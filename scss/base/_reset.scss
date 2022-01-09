@@ -1,0 +1,33 @@
+/*=============== BASE ===============*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: $body-font;
+  background: linear-gradient(0deg, $card-background-2 30%, $card-background-1 70%);
+  background-repeat: no-repeat;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  // max-width: 100%;
+  height: auto;
+}
+
+ol,
+ul {
+  list-style: none;
+}

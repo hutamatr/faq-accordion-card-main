@@ -1,0 +1,78 @@
+/*=============== QUESTIONS ===============*/
+
+.questions {
+  background-color: white;
+  border-radius: $rem-1-5;
+
+  &__container {
+    gap: $rem-1-5;
+    padding: $rem-1-5 0;
+  }
+
+  &__title {
+    text-align: center;
+    color: $text-color-1;
+    font-size: 1.7rem;
+    font-weight: $font-bold-1;
+  }
+
+  &__group {
+    display: grid;
+    row-gap: 0.9rem;
+  }
+  &__item {
+    border-radius: $rem-0-25;
+    row-gap: $rem-0-5;
+
+    &--title {
+      font-size: $smaller-font-size;
+      font-weight: $font-medium;
+      color: $text-color-3;
+    }
+  }
+
+  &__description {
+    font-size: $smaller-font-size;
+    color: $text-color-4;
+    padding-right: 1rem;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $text-color-4;
+    cursor: pointer;
+
+    &--img {
+      height: 0.4rem;
+    }
+  }
+
+  &__content {
+    max-height: 0;
+    overflow: hidden;
+    position: relative;
+    transition: max-height 0.7s;
+  }
+
+  &__item:target &__content {
+    max-height: 20rem;
+  }
+
+  &__item:target &__header &__header--img {
+    transform: rotate(180deg);
+  }
+
+  &__item:target &__header &__item--title {
+    color: $text-color-1;
+    font-weight: $font-bold-1;
+  }
+
+  &__line {
+    width: 100%;
+    display: block;
+    height: 1px;
+    background-color: $dividers;
+  }
+}

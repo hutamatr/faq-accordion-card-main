@@ -1,0 +1,46 @@
+/*=============== VARIABLES CSS ===============*/
+
+$header-height: 3.5rem;
+
+/*========== Colors ==========*/
+
+// Text
+$text-color-1: hsl(238, 29%, 16%);
+$text-color-2: hsl(14, 88%, 65%);
+$text-color-3: hsl(237, 12%, 33%);
+$text-color-4: hsl(240, 6%, 50%);
+$dividers: hsl(240, 5%, 91%);
+
+// Background Gradient
+
+$card-background-1: hsl(273, 75%, 66%);
+$card-background-2: hsl(240, 73%, 65%);
+
+/*========== Font and typography ==========*/
+$body-font: 'Kumbh Sans', sans-serif;
+$biggest-font-size: 2rem;
+$h1-font-size: 1.5rem;
+$h2-font-size: 1.25rem;
+$h3-font-size: 1rem;
+$normal-font-size: 1.3rem;
+$small-font-size: 0.938rem;
+$smaller-font-size: 0.75rem;
+
+/*========== Font weight ==========*/
+$font-medium: 300;
+$font-semi-bold: 400;
+$font-bold-1: 600;
+$font-bold-2: 700;
+
+/*========== REM ==========*/
+$rem-0-25: 0.25rem;
+$rem-0-5: 0.5rem;
+$rem-0-75: 0.75rem;
+$rem-1: 1rem;
+$rem-1-5: 1.5rem;
+$rem-2: 2rem;
+$rem-2-5: 2.5rem;
+
+/*========== z index ==========*/
+$z-tooltip: 10;
+$z-fixed: 100;

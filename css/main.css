@@ -1,0 +1,182 @@
+/*=============== VARIABLES CSS ===============*/
+/*========== Colors ==========*/
+/*========== Font and typography ==========*/
+/*========== Font weight ==========*/
+/*========== REM ==========*/
+/*========== z index ==========*/
+/*=============== REUSABLE CSS CLASSES ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+.section {
+  padding: 3.75rem 0 2rem;
+}
+
+/*=============== LAYOUT ===============*/
+.container {
+  max-width: 60.5rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main {
+  overflow: hidden;
+  /*For animation*/
+}
+
+/*=============== BASE ===============*/
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(30%, #6565e7), color-stop(70%, #af67e9));
+  background: linear-gradient(0deg, #6565e7 30%, #af67e9 70%);
+  background-repeat: no-repeat;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  height: auto;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+/*=============== QUESTIONS ===============*/
+.questions {
+  background-color: white;
+  border-radius: 1.5rem;
+}
+.questions__container {
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+}
+.questions__title {
+  text-align: center;
+  color: #1d1e35;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+.questions__group {
+  display: grid;
+  row-gap: 0.9rem;
+}
+.questions__item {
+  border-radius: 0.25rem;
+  row-gap: 0.5rem;
+}
+.questions__item--title {
+  font-size: 0.75rem;
+  font-weight: 300;
+  color: #4a4b5e;
+}
+.questions__description {
+  font-size: 0.75rem;
+  color: #787887;
+  padding-right: 1rem;
+}
+.questions__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #787887;
+  cursor: pointer;
+}
+.questions__header--img {
+  height: 0.4rem;
+}
+.questions__content {
+  max-height: 0;
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: max-height 0.7s;
+  transition: max-height 0.7s;
+}
+.questions__item:target .questions__content {
+  max-height: 20rem;
+}
+.questions__item:target .questions__header .questions__header--img {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.questions__item:target .questions__header .questions__item--title {
+  color: #1d1e35;
+  font-weight: 600;
+}
+.questions__line {
+  width: 100%;
+  display: block;
+  height: 1px;
+  background-color: #e7e7e9;
+}
+
+.footer__card {
+  text-align: center;
+}
+.footer__img {
+  width: 0.9rem;
+  cursor: pointer;
+  -webkit-animation: love 2s infinite;
+          animation: love 2s infinite;
+}
+
+@-webkit-keyframes love {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes love {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}/*# sourceMappingURL=main.css.map */
