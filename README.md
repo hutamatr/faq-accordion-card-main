@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution](https://www.frontendmentor.io/solutions/)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/faq-accordion-card-mobilefirst-scss-flex-grid-bem-bvZqQNeCX)
 - Live Site URL: [Demo](https://hutamatr.github.io/faq-accordion-card-main/)
 
 ## My process
