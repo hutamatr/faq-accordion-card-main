@@ -7,7 +7,11 @@
 /*=============== REUSABLE CSS CLASSES ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 .section {
-  padding: 3.75rem 0 2rem;
+  padding: 10rem 0 2rem;
+}
+
+.section-2 {
+  padding: 3rem 0 2rem;
 }
 
 /*=============== LAYOUT ===============*/
@@ -33,9 +37,7 @@
 }
 
 /*=============== BASE ===============*/
-*,
-*::before,
-*::after {
+* {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
@@ -49,8 +51,8 @@ html {
 
 body {
   font-family: "Kumbh Sans", sans-serif;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(30%, #6565e7), color-stop(70%, #af67e9));
-  background: linear-gradient(0deg, #6565e7 30%, #af67e9 70%);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(15%, #6565e7), color-stop(45%, #af67e9));
+  background: linear-gradient(0deg, #6565e7 15%, #af67e9 45%);
   background-repeat: no-repeat;
 }
 
@@ -68,23 +70,57 @@ ul {
 }
 
 /*=============== QUESTIONS ===============*/
-.questions {
+.questions__container {
   background-color: white;
   border-radius: 1.5rem;
-}
-.questions__container {
   gap: 1.5rem;
-  padding: 1.5rem 0;
+  padding: 2.5rem 0;
+}
+.questions__container--pattern1 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(150%);
+          transform: translateX(-50%) translateY(150%);
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 15.625rem;
+}
+.questions__image {
+  position: relative;
+}
+.questions__image--img1 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-80%);
+          transform: translateX(-50%) translateY(-80%);
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 15.625rem;
+}
+.questions__image--img2 {
+  display: none;
+}
+.questions__image--box {
+  display: none;
+}
+.questions__image--pattern2 {
+  display: none;
 }
 .questions__title {
   text-align: center;
   color: #1d1e35;
   font-size: 1.7rem;
   font-weight: 600;
+  margin: 2rem 0;
 }
 .questions__group {
   display: grid;
   row-gap: 0.9rem;
+  padding: 0 1.5rem;
 }
 .questions__item {
   border-radius: 0.25rem;
@@ -94,6 +130,11 @@ ul {
   font-size: 0.75rem;
   font-weight: 300;
   color: #4a4b5e;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.questions__item--title:hover {
+  color: #f47c57;
 }
 .questions__description {
   font-size: 0.75rem;
@@ -120,8 +161,8 @@ ul {
   max-height: 0;
   overflow: hidden;
   position: relative;
-  -webkit-transition: max-height 0.7s;
-  transition: max-height 0.7s;
+  -webkit-transition: max-height 0.5s;
+  transition: max-height 0.5s;
 }
 .questions__item:target .questions__content {
   max-height: 20rem;
@@ -129,6 +170,8 @@ ul {
 .questions__item:target .questions__header .questions__header--img {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 .questions__item:target .questions__header .questions__item--title {
   color: #1d1e35;
@@ -143,6 +186,9 @@ ul {
 
 .footer__card {
   text-align: center;
+}
+.footer__card a {
+  color: black;
 }
 .footer__img {
   width: 0.9rem;
@@ -178,5 +224,69 @@ ul {
   100% {
     -webkit-transform: scale(1);
             transform: scale(1);
+  }
+}
+@media screen and (min-width: 768px) {
+  .section-2 {
+    padding: 0;
+  }
+
+  .questions {
+    margin: 5rem auto;
+  }
+  .questions__container {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 3rem;
+    padding: 0;
+  }
+  .questions__container--pattern1 {
+    display: none;
+  }
+  .questions__section {
+    padding: 3rem 0;
+  }
+  .questions__image {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow: hidden;
+  }
+  .questions__image--img1 {
+    display: none;
+  }
+  .questions__image--img2 {
+    display: block;
+    width: 35rem;
+    position: relative;
+    right: 15%;
+    overflow: hidden;
+    z-index: 1;
+  }
+  .questions__image--box {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    -webkit-transform: translateX(-50%) translateY(95%);
+            transform: translateX(-50%) translateY(95%);
+  }
+  .questions__image--pattern2 {
+    display: block;
+    overflow: hidden;
+    max-width: 35rem;
+    max-width: 700px;
+    position: absolute;
+    -webkit-transform: translateX(-50%) translateY(-3%);
+            transform: translateX(-50%) translateY(-3%);
+  }
+  .questions__title {
+    text-align: left;
+    margin: 0 0 2rem 0;
+  }
+  .questions__group {
+    padding: 0 5rem 0 0;
+  }
+
+  .footer__card {
+    margin: 0 auto;
   }
 }/*# sourceMappingURL=main.css.map */

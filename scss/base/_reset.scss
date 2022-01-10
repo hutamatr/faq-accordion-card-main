@@ -1,7 +1,5 @@
 /*=============== BASE ===============*/
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -14,7 +12,7 @@ html {
 
 body {
   font-family: $body-font;
-  background: linear-gradient(0deg, $card-background-2 30%, $card-background-1 70%);
+  background: linear-gradient(0deg, $card-background-2 15%, $card-background-1 45%);
   background-repeat: no-repeat;
 }
 

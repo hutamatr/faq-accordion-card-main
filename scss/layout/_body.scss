@@ -1,0 +1,123 @@
+/*=============== QUESTIONS ===============*/
+
+.questions {
+  &__container {
+    background-color: white;
+    border-radius: $rem-1-5;
+    gap: $rem-1-5;
+    padding: $rem-2-5 0;
+
+    &--pattern1 {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%) translateY(150%);
+      display: block;
+      width: 100%;
+      height: auto;
+      max-width: 15.625rem;
+    }
+  }
+
+  &__image {
+    position: relative;
+
+    &--img1 {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%) translateY(-80%);
+      display: block;
+      width: 100%;
+      height: auto;
+      max-width: 15.625rem;
+    }
+
+    &--img2 {
+      display: none;
+    }
+
+    &--box {
+      display: none;
+    }
+
+    &--pattern2 {
+      display: none;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    color: $text-color-1;
+    font-size: 1.7rem;
+    font-weight: $font-bold-1;
+    margin: 2rem 0;
+  }
+
+  &__group {
+    display: grid;
+    row-gap: 0.9rem;
+    padding: 0 1.5rem;
+  }
+  &__item {
+    border-radius: $rem-0-25;
+    row-gap: $rem-0-5;
+
+    &--title {
+      font-size: $smaller-font-size;
+      font-weight: $font-medium;
+      color: $text-color-3;
+      transition: 0.4s;
+
+      &:hover {
+        color: $text-color-2;
+      }
+    }
+  }
+
+  &__description {
+    font-size: $smaller-font-size;
+    color: $text-color-4;
+    padding-right: 1rem;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $text-color-4;
+    cursor: pointer;
+
+    &--img {
+      height: 0.4rem;
+    }
+  }
+
+  &__content {
+    max-height: 0;
+    overflow: hidden;
+    position: relative;
+    transition: max-height 0.5s;
+  }
+
+  &__item:target &__content {
+    max-height: 20rem;
+  }
+
+  &__item:target &__header &__header--img {
+    transform: rotate(180deg);
+    transition: 0.4s;
+  }
+
+  &__item:target &__header &__item--title {
+    color: $text-color-1;
+    font-weight: $font-bold-1;
+  }
+
+  &__line {
+    width: 100%;
+    display: block;
+    height: 1px;
+    background-color: $dividers;
+  }
+}

@@ -1,2 +1,71 @@
 @media screen and(min-width: 768px) {
+  .section-2 {
+    padding: 0;
+  }
+  .questions {
+    margin: 5rem auto;
+
+    &__container {
+      grid-template-columns: repeat(2, 1fr);
+      margin: 0 3rem;
+      padding: 0;
+
+      &--pattern1 {
+        display: none;
+      }
+    }
+
+    &__section {
+      padding: 3rem 0;
+    }
+
+    &__image {
+      align-items: center;
+      overflow: hidden;
+
+      &--img1 {
+        display: none;
+      }
+
+      &--img2 {
+        display: block;
+        width: 35rem;
+        position: relative;
+        right: 15%;
+        overflow: hidden;
+        z-index: 1;
+      }
+
+      &--box {
+        display: block;
+        position: absolute;
+        z-index: 2;
+        transform: translateX(-50%) translateY(95%);
+      }
+
+      &--pattern2 {
+        display: block;
+        overflow: hidden;
+        max-width: 35rem;
+        max-width: 700px;
+        position: absolute;
+        transform: translateX(-50%) translateY(-3%);
+      }
+    }
+
+    &__title {
+      text-align: left;
+      margin: 0 0 2rem 0;
+    }
+
+    &__group {
+      padding: 0 5rem 0 0;
+    }
+  }
+
+  .footer {
+    &__card {
+      margin: 0 auto;
+    }
+  }
 }
